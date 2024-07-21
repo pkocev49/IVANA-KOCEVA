@@ -1,6 +1,15 @@
 import './assets/main.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { createApp } from 'vue'
+import BootstrapVue3 from 'bootstrap-vue-3';
 import App from './App.vue'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+
+app.use(BootstrapVue3)
+
+
+
+app.mount('#app')
+
