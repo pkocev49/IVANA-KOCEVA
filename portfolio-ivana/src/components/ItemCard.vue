@@ -5,11 +5,26 @@
       <span class="itemText">{{ item.title }}</span>
     </div>
   </section>
+  <section class="cardContainer">
+    <div class="secondItemDiv" v-for="(item, index) in whyInvestItems" :key="index">
+      <span style="margin-bottom: 40px" class="itemText">{{ item.title }}</span>
+      <span style="margin-bottom: 20px">{{ item.fromToYear }}</span>
+      <img style="margin-bottom: 20px" :src="item.icon" alt="icon" class="itemIcon" />
+      <span>{{ item.investmentByYear }}</span>
+      <span
+        >Вкупно Вложени: <b>{{ item.fullInvestment }}</b></span
+      >
+      <span
+        >На возраст од 65: <br />
+        <b>{{ item.atAgeof }}</b></span
+      >
+    </div>
+  </section>
 </template>
 
 <script>
 export default {
-  props: ['items']
+  props: ['items', 'whyInvestItems']
 }
 </script>
 
@@ -36,6 +51,20 @@ li {
   text-align: center;
   font-size: 20px;
 }
+.secondItemDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border: 3px solid #3f3f3f;
+  border-radius: 15px;
+  width: 350px;
+  height: 450px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 20px;
+}
 
 .cardContainer {
   margin-top: 50px;
@@ -54,6 +83,7 @@ li {
 .itemText {
   font-size: 20px;
   color: #3f3f3f;
+  font-weight: bold;
 }
 
 @media only screen and (min-width: 1080px) {

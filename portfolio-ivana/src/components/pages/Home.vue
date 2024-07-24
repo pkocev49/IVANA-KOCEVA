@@ -7,26 +7,29 @@
       <div class="seccondContainer">
         <h2 id="title" class="title"></h2>
         <h3 id="subHeading" class="subHeading"></h3>
+        <span class="btn btn-secondary" style="margin-top: 20px">Контактирај ме!</span>
       </div>
     </div>
-    <!-- <div class="triangle"></div> -->
   </section>
   <!-- <div class="bottom"></div> -->
   <WhatYouGet />
+  <WhyInvest />
 </template>
 
 <script>
 import Typewriter from 'typewriter-effect/dist/core'
 import WhatYouGet from '../WhatYouGet.vue'
+import WhyInvest from '../WhyInvest.vue'
 
 export default {
   components: {
-    WhatYouGet
+    WhatYouGet,
+    WhyInvest
   },
   data() {
     return {
-      title: 'Придружи се во тимот на успешните',
-      subHeading: 'И заработувај многу'
+      title: 'Придружи се во тимот на успешните!',
+      subHeading: 'И заработувај многу!'
     }
   },
   mounted() {
@@ -65,6 +68,9 @@ h3 {
 li {
   list-style: none;
   color: white;
+}
+.firstContainer {
+  width: 100%;
 }
 
 .seccondContainer {

@@ -5,7 +5,9 @@
     variant="faded"
     style="padding: 15px; background-color: #3f3f3f !important"
   >
-    <b-navbar-brand href="#" class="custom-nav-brand">Ивана Коцева</b-navbar-brand>
+    <b-navbar-brand href="#" class="custom-nav-brand" style="font-size: 25px"
+      >Ивана Коцева</b-navbar-brand
+    >
 
     <!-- <b-navbar-toggle target="nav-collapse"></b-navbar-toggle> -->
 
@@ -32,7 +34,8 @@ export default {
     return {
       menuItems: [
         { href: '#whatyouget', text: 'Што добивате вие' },
-        { href: '#about', text: 'За мене' },
+        { href: '#whyStartInvesting', text: 'Зошто да почнете да инвестирате' },
+        // { href: '#about', text: 'За мене' },
         { href: '#contact', text: 'Контактирајте ме' }
       ]
     }
@@ -49,7 +52,7 @@ export default {
 }
 
 .custom-nav-item >>> .nav-link:hover {
-  color: #007bff !important; /* Change text color on hover */
+  color: #b9d4f0 !important; /* Change text color on hover */
 }
 .navbar-toggler {
   border: none;
@@ -63,5 +66,15 @@ export default {
 }
 .custom-nav-item >>> .nav-link.active {
   color: #adb5bd !important; /* Change text color for the active nav item */
+}
+@media only screen and (min-width: 768px) {
+  .custom-nav-item >>> .nav-link {
+    font-size: 20px !important;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  .custom-nav-item >>> .nav-link {
+    font-size: 25px !important;
+  }
 }
 </style>

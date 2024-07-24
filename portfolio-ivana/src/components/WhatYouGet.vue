@@ -1,17 +1,16 @@
 <template>
-  <section>
+  <section style="margin-top: 300px">
     <h1 class="title">{{ title }}</h1>
-    <Card :items="items" />
+    <ItemCard :items="items" />
   </section>
 </template>
 
 <script>
-import Card from './Card.vue'
+import ItemCard from './ItemCard.vue'
 import items from '../utils/items.js'
-
 export default {
   components: {
-    Card
+    ItemCard
   },
   data() {
     return {
